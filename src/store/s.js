@@ -54,7 +54,8 @@ export const store = new Vuex.Store({
             })
         },
         updateTodo(state, todo){
-            const index = state.todos.findIndex(item => item.id ==  todo.id);
+            console.log(state.todos)
+            const index = state.todos.findIndex(item => item.id = todo.id);
             state.todos.splice(index, 1, {
                 'id': todo.id,
                 'title': todo.title,
@@ -65,7 +66,7 @@ export const store = new Vuex.Store({
         },
         deleteTodo(state, id) {
             const index = state.todos.findIndex(item => {
-               item.id == id
+               item.id = id
             });
             state.todos.splice(index, 1)
         },

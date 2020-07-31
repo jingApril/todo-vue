@@ -57,27 +57,16 @@ import 'animate.css'
             // }
         },
         methods: {
-            // addTodo() {
-            //     if(this.newTodo.trim().length == 0) {
-            //         return;
-            //     }
-            //     this.$store.dispatch('addTodo', {
-            //         id: this.idForTodo,
-            //         title: this.newTodo,
-            //     })
-            //     this.newTodo = '',
-            //     this.idForTodo++;
-            // },
             addTodo() {
-            if (this.newTodo.trim().length == 0) {
-                return
-            }
-            this.$store.dispatch('addTodo', {
-                id: this.idForTodo,
-                title: this.newTodo,
-            })
-            this.newTodo = ''
-            this.idForTodo++
+                if (this.newTodo.trim().length == 0) {
+                    return
+                }
+                this.$store.dispatch('addTodo', {
+                    id: this.idForTodo,
+                    title: this.newTodo,
+                })
+                    this.newTodo = ''
+                    this.idForTodo++
             },
 
         }
